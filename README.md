@@ -71,7 +71,7 @@ export default {
 import { message } from "antd";
 export default function(config = {}) {
   const { calllBack = () => {} } = config;
-  message.success("添加成功！");
+  message.success("Add success!");
   calllBack();
 }
 ```
