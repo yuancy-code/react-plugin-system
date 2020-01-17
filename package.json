@@ -1,9 +1,9 @@
 {
   "name": "react-plugin-system",
-  "version": "0.0.1",
-  "description": "A project build by rollup-cli.",
+  "version": "0.1.1",
+  "description": "react-plugin-system project build by rollup-cli.",
   "main": "lib/index.min.js",
-  "module": "es/index.js",
+  "module": "lib/index.js",
   "scripts": {
     "dev": "./node_modules/.bin/rollup -c build/rollup.demo.config.js --watch",
     "demo": "./node_modules/.bin/rimraf public/static && NODE_ENV=production ./node_modules/.bin/rollup -c build/rollup.demo.config.js",
@@ -14,6 +14,10 @@
   "keywords": [
     "react plugin"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuancy-code/react-plugin-system.git"
+  },
   "author": "z137168075 <zyycy_love@126.com>",
   "license": "MIT",
   "dependencies": {},
