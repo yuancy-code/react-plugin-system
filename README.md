@@ -24,7 +24,6 @@ pages.keys().map(key => {
 // src/pages/*/*.jsx
 import React from "react";
 import { callPlugin, Plugin } from "react-plugin-system";
-
 export defalut class ButtonBox extends React.Component {
     constructor(props) {
         super(props);
@@ -53,6 +52,27 @@ export defalut class ButtonBox extends React.Component {
         </div>
     }
 }
+```
+
+## plugin demo
+
+```js
+// src/plugins/add/config.js
+export default {
+  id: "add",
+  index: "add/index.js"
+};
+```
+
+```js
+// scr/plugins/add/index.js
+import { message } from "antd";
+export default function(config = {}) {
+  const { calllBack = () => {} } = config;
+  message.success("添加成功！");
+  calllBack();
+}
+
 ```
 
 ## License
