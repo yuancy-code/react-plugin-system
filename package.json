@@ -1,6 +1,6 @@
 {
   "name": "react-plugin-system",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "react-plugin-system project build by rollup-cli.",
   "main": "lib/index.min.js",
   "module": "lib/index.js",

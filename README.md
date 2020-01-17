@@ -76,7 +76,7 @@ export default function(config = {}) {
 }
 ```
 
-### Plugin Demo
+### Info plugin
 
 ```js
 // src/plugins/info/config.js
