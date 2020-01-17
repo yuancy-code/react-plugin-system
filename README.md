@@ -56,6 +56,8 @@ export defalut class ButtonBox extends React.Component {
 
 ## plugin demo
 
+### Add plugin
+
 ```js
 // src/plugins/add/config.js
 export default {
@@ -72,8 +74,48 @@ export default function(config = {}) {
   message.success("添加成功！");
   calllBack();
 }
-
 ```
+
+### Plugin Demo
+
+```js
+// src/plugins/info/config.js
+export default {
+  id: "info",
+  index: "info/index.jsx"
+};
+```
+
+```js
+// scr/plugins/info/index.jsx
+import React from "react";
+import { Button, notification } from "antd";
+export default class Info extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  clickHandle = () => {
+    const { onClose = () => {} } = this.props;
+    notification["info"]({
+      message: "Project info",
+      description: "Here is the notice!",
+      onClose: () => {
+        onClose("User Close");
+      }
+    });
+  };
+  render() {
+    return (
+      <Button icon="info-circle" onClick={this.clickHandle}>
+        Info
+      </Button>
+    );
+  }
+}
+```
+
+###
 
 ## License
 
