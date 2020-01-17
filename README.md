@@ -115,6 +115,20 @@ export default class Info extends React.Component {
 }
 ```
 
+## Notice
+
+The system needs to add "@plugins" alias.
+
+```js
+// webpack.config.js
+{
+    alias: {
+        "react-native": "react-native-web",
+        "@plugins": path.resolve("./src/plugins"),
+    }
+}
+```
+
 ###
 
 ## License
